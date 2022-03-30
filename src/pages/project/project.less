@@ -1,0 +1,70 @@
+.project {
+    width: 1190px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 10px;
+    .project-title {
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .project-list {
+        border-top: 1px solid rgb(174, 167, 157);
+        width: 70%;
+        background-color: white;
+
+        .project-list-item {
+            display: flex;
+            border-bottom: 1px solid #e2e2e2;
+            align-items: center;
+
+            .project-list-icon {
+                color: rgb(200, 195, 188);
+                margin: auto 14px;
+                :hover {
+                    color: red;
+                }
+            }
+            .project-list-content {
+                width: 75%;
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                justify-content: space-around;
+
+                .project-list-content-title {
+                    color: black;
+                    font-size: 16px;
+                    white-space: normal;
+                    font-weight: bold;
+                    :hover {
+                        color: rgb(27, 138, 97);
+                    }
+                }
+                .project-list-content-body {
+                    margin: 10px 10px 0 10px;
+                    color: rgb(174, 167, 157);
+                    font-size: 14px;
+                }
+                .project-list-content-time {
+                    margin: 10px;
+                    color: rgb(174, 167, 157);
+                    font-size: 12px;
+                }
+                .project-list-content-button {
+                    color: rgb(174, 167, 157);
+                    font-size: 12px;
+                    white-space: normal;
+                    font-weight: bold;
+                    :hover {
+                        color: rgb(27, 138, 97);
+                    }
+                }
+            }
+            .project-list-content-img {
+                width: 20%;
+                height: 100px;
+                overflow: hidden;
+            }
+        }
+    }
+}
