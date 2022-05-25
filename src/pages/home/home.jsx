@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Layout, Menu } from "antd";
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from "@ant-design/icons";
 
-import Banner, { BannerTiem } from "../../components/banner/banner";
+import Banner from "../../components/banner/banner";
 import ArticleList from "../../components/article-list/article-list";
 import { getTopArticle, getArticle, getBanner } from "../../api";
-
 import "./home.less";
-
 const { Content, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -23,7 +21,6 @@ function Home() {
             setData(result);
         });
         getBanner().then(data => {
-            console.log(data);
             setBannerList(data);
         });
     }, []);
@@ -49,13 +46,9 @@ function Home() {
             <Banner>
                 {bannerList.map(item => {
                     return (
-                        <BannerTiem key={item.url}>
-                            {
-                                <a href={item.url} target="_blank" rel="noreferrer">
-                                    <img src={item.imagePath} alt="" />
-                                </a>
-                            }
-                        </BannerTiem>
+                        <a key={item.url} href={item.url} target="_blank" rel="noreferrer">
+                            <img src={item.imagePath} alt="" />
+                        </a>
                     );
                 })}
             </Banner>

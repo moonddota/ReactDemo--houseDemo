@@ -11,6 +11,7 @@ import OfficialAccount from "./pages/official-account/official-account";
 import ProgectClass from "./pages/progect-class/progect-class";
 import Tool from "./pages/tool/tool";
 import Login from "./pages/login/login";
+import ChinaColor from "./pages/china_color/china_color";
 import Coin from "./pages/coin/coin";
 import My from "./pages/my/my";
 import MyPage from "./pages/my-page/my-page";
@@ -31,6 +32,7 @@ function App() {
                     <Route path="/main/progect-class" element={<ProgectClass />} />
                     <Route path="/main/tool" element={<Tool />} />
                     <Route path="/main/login" element={<Login />} />
+                    <Route path="/main/chinacolor" element={<ChinaColor />} />
                     <Route path="/main/" element={<Navigate to="/main/home" />} />
                 </Route>
                 <Route path="/my" element={<My />}>

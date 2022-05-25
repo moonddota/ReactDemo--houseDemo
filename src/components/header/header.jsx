@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { memo, useState, useEffect } from "react";
 import logo from "../../assets/images/logo.png";
 import { Tabs, Modal, Menu, Dropdown, Button } from "antd";
 import { ExclamationCircleOutlined } from "@ant-design/icons";
@@ -23,6 +23,7 @@ const Header = () => {
         { name: "公众号", path: "/main/official-account" },
         { name: "项目分类", path: "/main/progect-class" },
         { name: "工具", path: "/main/tool" },
+        { name: "中国色", path: "/main/chinacolor" },
     ];
     const navigate = useNavigate();
     const loaction = useLocation();
@@ -98,7 +99,7 @@ const Header = () => {
     );
 
     return (
-        <div className="header">
+        <div id="header">
             <div className="header-div">
                 <img
                     className="header-logo"
@@ -145,4 +146,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default memo(Header);

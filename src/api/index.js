@@ -49,3 +49,5 @@ export const getWwallpaperMenu = (page, sorting, q) =>
 export const getWallpaperVideo = () => ajax(BASE3 + `/json/wallpaperVideo.json`, {}, "GET");
 
 //--------------------   系统2  --------------------//
+
+export const getChinaColor = () => ajax("/china_color.json", {}, "GET");
