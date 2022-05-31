@@ -51,3 +51,5 @@ export const getWallpaperVideo = () => ajax(BASE3 + `/json/wallpaperVideo.json`,
 //--------------------   系统2  --------------------//
 
 export const getChinaColor = () => ajax("/china_color.json", {}, "GET");
+const BASE4 = "api4";
+export const hLogin = user => ajax("http://192.168.100.167:8000", user, "GET");

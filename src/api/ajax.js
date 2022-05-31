@@ -91,3 +91,4 @@ export function ajax2(url, data = {}, type = "GET") {
             });
     });
 }
+

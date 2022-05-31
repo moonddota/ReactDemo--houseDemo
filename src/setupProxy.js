@@ -20,6 +20,12 @@ module.exports = function (app) {
             target: "https://go.itab.link", //请求转发给谁
             changeOrigin: true, //控制服务器收到的请求头中Host的值
             pathRewrite: { "^/api3": "" }, //重写请求路径(必须)
+        }),
+        createProxyMiddleware("/api4", {
+            //遇见/api1前缀的请求，就会触发该代理配置
+            target: "http://192.168.100.167:8000", //请求转发给谁
+            changeOrigin: true, //控制服务器收到的请求头中Host的值
+            pathRewrite: { "^/api4": "" }, //重写请求路径(必须)
         })
     );
 };

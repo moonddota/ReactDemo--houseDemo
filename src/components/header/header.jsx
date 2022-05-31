@@ -24,6 +24,7 @@ const Header = () => {
         { name: "项目分类", path: "/main/progect-class" },
         { name: "工具", path: "/main/tool" },
         { name: "中国色", path: "/main/chinacolor" },
+        { name: "HttpDemo", path: "/httpdemo" },
     ];
     const navigate = useNavigate();
     const loaction = useLocation();

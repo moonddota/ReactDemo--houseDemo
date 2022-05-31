@@ -16,6 +16,7 @@ import Coin from "./pages/coin/coin";
 import My from "./pages/my/my";
 import MyPage from "./pages/my-page/my-page";
 import Entertainment from "./pages/entertainment/entertainment";
+import HLogin from "./pages/demo/login/login";
 
 function App() {
     return (
@@ -41,6 +42,7 @@ function App() {
                     <Route path="/my" element={<Navigate to="/my/mypage" />} />
                 </Route>
                 <Route path="/entertainment" element={<Entertainment />}></Route>
+                <Route path="/httpdemo" element={<HLogin />}></Route>
                 <Route path="*" element={<Navigate to="/main" />} />
             </Routes>
         </HashRouter>
